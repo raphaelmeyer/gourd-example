@@ -5,7 +5,7 @@ type Calculator struct{}
 type Button uint32
 
 const (
-	Zero Button = 0
+	Zero Button = iota
 	One
 	Two
 	Three
@@ -23,9 +23,11 @@ const (
 	Clear
 )
 
-func (calculator Calculator) Display() int64 {
+func (calculator Calculator) DisplayValue() int64 {
 	return 0
 }
 
 func (calculator Calculator) Press(button Button) {
 }
+
+

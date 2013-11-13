@@ -10,13 +10,13 @@ type Context struct {
 }
 
 func main() {
-	cuke := new(gourd.Cucumber)
+	cucumber := new(gourd.Cucumber)
 
-	cuke.Given("Regex").Do(
+	cucumber.Given("Regex").Do(
 		func(context * gourd.Context) {
-			cuke.Expect(true)
+			cucumber.Expect(true)
 		})
 
-	cuke.Start();
+	cucumber.Start();
 }
 

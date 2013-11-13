@@ -1,3 +1,9 @@
+
+Feature: Addition
+  As a ...
+  I want to ...
+  In order to ...
+
 #  _______
 #  _______
 #
@@ -7,11 +13,6 @@
 #  0 C = +
 #
 
-Feature: Addition
-  As a 
-  I want to 
-  In order to 
-
 Scenario: Add two numbers
   Given the calculator is cleared
   When I press 5
@@ -19,4 +20,5 @@ Scenario: Add two numbers
   And I press 7
   And I press =
   Then the result on the screen should be 12
+
 
