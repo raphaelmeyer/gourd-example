@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/raphaelmeyer/gourd-example/calc"
 	"github.com/raphaelmeyer/gourd"
+	"github.com/raphaelmeyer/gourd-example/calc"
 )
 
 type Context struct {
@@ -13,10 +13,9 @@ func main() {
 	cucumber := new(gourd.Cucumber)
 
 	cucumber.Given("Regex").Do(
-		func(context * gourd.Context) {
+		func(context *gourd.Context) {
 			cucumber.Expect(true)
 		})
 
-	cucumber.Start();
+	cucumber.Start()
 }
-
