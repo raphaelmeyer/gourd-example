@@ -6,8 +6,7 @@ go:
   - 1.2
 
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq cucumber
+  - gem install cucumber
 
 after_success:
   - go run wireserver/steps.go &
