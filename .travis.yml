@@ -5,7 +5,11 @@ go:
   - 1.1
   - 1.2
 
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq cucumber
+
 after_success:
-  go run wireserver/steps.go &
-  cucumber
+  - go run wireserver/steps.go &
+  - cucumber
 
