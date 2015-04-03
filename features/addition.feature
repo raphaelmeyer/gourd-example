@@ -1,24 +1,11 @@
-
 Feature: Addition
-  As a ...
-  I want to ...
-  In order to ...
+  In order to avoid silly mistakes
+  As a math idiot
+  I want to be told the soum of two numbers
 
-#  _______
-#  _______
-#
-#  7 8 9 /
-#  4 5 6 *
-#  1 2 3 -
-#  0 C = +
-#
-
-Scenario: Add two numbers
-  Given the calculator is cleared
-  When I press 5
-  And  I press +
-  And I press 7
-  And I press =
-  Then the result on the screen should be 12
-
+  Scenario: Add two numbers
+    Given I have entered 50 into the calculator
+    And I have entered 70 into the calculator
+    When I press add
+    Then the result should be 120 on the screen
 
