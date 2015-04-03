@@ -11,6 +11,5 @@ before_install:
   - gem install cucumber
 
 after_success:
-  - go run wireserver/steps.go &
-  - cucumber
+  - ( go run features/step_definitions/steps.go & ) ; sleep 1 ; cucumber
 
