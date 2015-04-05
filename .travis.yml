@@ -11,5 +11,5 @@ before_install:
   - gem install cucumber
 
 script:
-  - ( go run features/step_definitions/steps.go & ) ; sleep 1 ; cucumber --wip
+  - ( go run features/step_definitions/steps.go & ) ; sleep 1 ; cucumber
 
