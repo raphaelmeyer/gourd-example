@@ -17,21 +17,25 @@ func main() {
 	cucumber := gourd.NewCucumber(new_scenario)
 
 	cucumber.Given("^I have entered (\\d+) into the calculator$").Do(
-		func(context interface{}, args ...interface{}) {
+		func(context interface{}, arguments gourd.Arguments) {
 			scenario, _ := context.(*calc_context)
-			scenario.calc.Push(50)
+			input := arguments.Int(0)
+
+			scenario.calc.Push(input)
 		})
 
 	cucumber.When("^I press add$").Do(
-		func(context interface{}, args ...interface{}) {
+		func(context interface{}, arguments gourd.Arguments) {
 			scenario, _ := context.(*calc_context)
+
 			scenario.calc.Add()
 		})
 
 	cucumber.Then("^the result should be (\\d+) on the screen$").Do(
-		func(context interface{}, args ...interface{}) {
+		func(context interface{}, arguments gourd.Arguments) {
 			scenario, _ := context.(*calc_context)
-			if scenario.calc.Result() != 120 {
+			result := arguments.Int(0)
+			if scenario.calc.Result() != result {
 				panic("Wrong result")
 			}
 		})
